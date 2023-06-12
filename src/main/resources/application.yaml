@@ -1,0 +1,34 @@
+spring:
+  security:
+    user:
+      name: vinod
+      password: ENC(kQttnkxwwIJPt2oGd30Uhg==)
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 96746637527-s5lu202abmb42j63dgpej6o1lb7ukc6a.apps.googleusercontent.com
+            client-secret: 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
+            redirectUri: http://localhost:8080/login/oauth2/code/google
+  datasource:
+    url: jdbc:mysql://localhost:3306/DataJPA?createDatabaseIfNotExist=true
+    username: root
+    password: Me@mysql89
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+jasypt:
+  encryptor:
+    password: password
+
+debug:
+  false
+
+logging:
+  level:
+    org:
+      springframework:
+        security: INFO
+server:
+  port: 9090
